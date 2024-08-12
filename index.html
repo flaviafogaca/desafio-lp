@@ -69,15 +69,16 @@
 
           <div class="form">
             <h1>FORMULÁRIO DE INSCRIÇÃO</h1>
-            <form id="registration-form">
+            <form id="registration-form" onsubmit="enviarFormulario(event)">
                 <input type="text" id="name" name="name" required placeholder="Nome completo">
         
                 <input type="email" id="email" name="email" required placeholder="E-mail">
         
                 <input type="number" id="age" name="age" required min="1" step="1" placeholder="Idade">
         
-                <select id="region" name="region" required>
+                <select id="region" name="region" required onchange="verificarRegiao()">
                     <option value="" disabled selected>Selecione um país ou região</option>
+                    <option value="outro">Outro</option>
                     <optgroup label="Brasil">
                         <option value="AC">Acre</option>
                         <option value="AL">Alagoas</option>
@@ -106,25 +107,26 @@
                         <option value="SP">São Paulo</option>
                         <option value="SE">Sergipe</option>
                         <option value="TO">Tocantins</option>
-                    </optgroup>
-                    <option value="outro">Outro</option>
+                    </optgroup>                
                 </select>
-                <input type="text" id="other-region" name="other-region" placeholder="Especifique se 'Outro'" style="display: none;" required>
+                <input type="text" id="other-region" name="other-region" placeholder="Especifique se 'Outro'" style="display: none;">
         
                 <div class="custom-select-container">
                     <div id="games-button" class="select-button">Preferência de jogos<span class="arrow"></span></div>
                     <div id="games-container" class="select-options">
-                        <label><input type="checkbox" name="games" value="lol" required>League of Legends</label>
-                        <label><input type="checkbox" name="games" value="cs" required>CS (Counter-Strike: Global Offensive)</label>
-                        <label><input type="checkbox" name="games" value="valorant" required>VALORANT</label>
-                        <label><input type="checkbox" name="games" value="free_fire" required>Free Fire</label>
-                        <label><input type="checkbox" name="games" value="simulacao" required> Simulação</label>
-                        <label><input type="checkbox" name="games" value="outros" required> Outros</label>
+                        <label><input type="checkbox" name="games" value="lol">League of Legends</label>
+                        <label><input type="checkbox" name="games" value="cs">CS (Counter-Strike: Global Offensive)</label>
+                        <label><input type="checkbox" name="games" value="valorant">Valorant</label>
+                        <label><input type="checkbox" name="games" value="free_fire">Free Fire</label>
+                        <label><input type="checkbox" name="games" value="simulacao">Rainbow Six Siege</label>
+                        <label><input type="checkbox" name="games" value="outros">Apex Legends</label>
+                        <label><input type="checkbox" name="games" value="outros">Rocket League</label>
+                        <button type="button" onclick="concluirSelecao()">Concluir</button>
                     </div>
-                </div>           
+                </div>        
                 <p>Seus dados estarão seguros conosco e serão utilizados apenas para enviar informações e benefícios exclusivos da furia.gg.</p>
                 <button type="submit">CONCLUIR INSCRIÇÃO</button>  
-                <p id="form-message" style="display: none; color: green;">Formulário enviado com sucesso!</p> 
+                
             </form>    
         </div>
         </section>
