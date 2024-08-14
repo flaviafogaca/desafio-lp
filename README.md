@@ -4,6 +4,8 @@
 
 Esse projeto consiste em criar uma landing page para Furia com o objetivo de aumentar a comunidade Furia junto aos apaixonados por League of Legends.
 
+OBS: Para rodar essa versão do projeto, que é a versão completa, será necessário criar um banco de dados no MySQL para armazenar as informações do formulário da landing page. Se preferir não criar o banco de dados, mas ainda quiser preencher o formulário e receber o e-mail de confirmação de inscrição, é possível fazer baixando e seguindos as instruções do repositório do link: https://github.com/flaviafogaca/desafio-lp-sem-bd.
+
 ### 📝 Requisitos de elaboração 
 
 A criação da Landing Page foi livre.
