@@ -65,8 +65,9 @@ app.post('/submit', (req, res) => {
                 <p>Seu cupom é <strong>FURIA10</strong>.</p>
                 <p>Por aqui, sempre compartilharemos em primeira mão as novidades sobre os nossos produtos, conteúdos exclusivos, informações de campeonatos, jogos e muito mais!</p>
                 <p>Vamos movimentar e conectar nossa comunidade! Siga-nos nas redes sociais e nos vemos em Summoner's Rift!</p>
+                <br>
                 <p>Um abraço,</p>
-                ,<br>Time Furia</p>
+                <p>Time Furia</p>
             </body>
             </html>
         `,
