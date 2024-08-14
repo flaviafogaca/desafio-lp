@@ -1,8 +1,25 @@
 Criação do banco de dados
 
-1.Baixe o MySQL Workbench 8.0 CE
-2. Crie um banco de dados com o nome formulario_desafio. Para isso, utilize o comando: CREATE DATABASE formulario_desafio;
-3. Entre no banco de dados formulario_desafio;
-4. Crie uma tabela 
-3. Crie uma tabela com o nome inscricoes contentando as seguintes campos: nome, email, idade, regiao, outros, jogos
- 
+1.Baixe o MySQL Workbench 8.0 CE (https://dev.mysql.com/downloads/workbench/)
+2. Crie uma conta no MySQL
+3. Crie um banco de dados com o nome formulario_desafio. Para isso, utilize o comando: CREATE DATABASE formulario_desafio;
+4. Entre no banco de dados formulario_desafio;
+5. Crie uma tabela usando o seguinte comando:
+CREATE TABLE inscricoes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    idade INT NOT NULL,
+    regiao VARCHAR(100) NOT NULL,
+    outros VARCHAR(100) DEFAULT NULL,
+    jogos VARCHAR(700) NOT NULL
+);
+6. Vá para a pasta backend/index.js
+7. No arquivo index.js, no código a seguir, substitua os campos "user" e "password" pelos seus dados:
+const db = mysql.createConnection({
+    host: 'localhost',
+    user: 'flavia_fogaca',
+    password: '123fla00',
+    database: 'formulario_desafio'
+});
+8.Após isso, retorne para o passo 3 da "Descrição para Utilização" do README.md
