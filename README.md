@@ -35,14 +35,13 @@ A criação da Landing Page foi livre.
 
 1. Entre na pasta raíz do projeto `desafio-furia`;
 2. No terminal do editor de código utilizado, rodar o comando `npm install`
-3. No terminal do editor de código utilizado, rodar o comando `npm start`
-4. Vá para a pasta backend/index.js;
-5. No terminal do editor de código utilizado, rodar o comando "node index.js" (certifique-se que o terminal seja rodado na pasta backend);
-6. Pronto! O servidor está rodando e conectado ao banco de dados;
-7. Vá para a pasta frontend e abra o arquivo index.html no seu navegador;
-8. Preencha o formulário da landing page e conclua sua inscrição no formulário de inscrição! Ao confirmar a incrição, você recebrá uma mensagem de confirmação tanto no navegador como no seu e-mail utilizado para preencher o formulário.
-9. Além disso, ao concluir a inscrição no formulário, seus dados serão enviados para um banco de dados do MySQL (banco formulario_desafio, tabela inscricoes).
-10. É possível realizar a inscrição mais de uma vez.
+3. Vá para a pasta backend/index.js;
+4. No terminal do editor de código utilizado, rodar o comando "node index.js" (certifique-se que o terminal seja rodado na pasta backend);
+5. Pronto! O servidor está rodando e conectado ao banco de dados;
+6. Vá para a pasta frontend e abra o arquivo index.html no seu navegador;
+7. Preencha o formulário da landing page e conclua sua inscrição no formulário de inscrição! Ao confirmar a incrição, você recebrá uma mensagem de confirmação tanto no navegador como no seu e-mail utilizado para preencher o formulário.
+8. Além disso, ao concluir a inscrição no formulário, seus dados serão enviados para um banco de dados do MySQL (banco formulario_desafio, tabela inscricoes).
+9. É possível realizar a inscrição mais de uma vez.
 
 </br>
 <p align="center">
