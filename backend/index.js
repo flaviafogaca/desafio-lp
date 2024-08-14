@@ -10,13 +10,20 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Configuração da conexão com o banco de dados
-const connection = mysql.createConnection({
+const db = mysql.createConnection({
     host: 'localhost',
-    user: 'flavia_fogaca',  // Use o nome de usuário criado
-    password: '123fla00',  // Use a senha criada
+    user: 'flavia_fogaca',
+    password: '123fla00',
     database: 'formulario_desafio'
 });
 
+db.connect((err) => {
+    if (err) {
+        console.error('Erro ao conectar ao banco de dados:', err);
+        return;
+    }
+    console.log('Conectado ao banco de dados MySQL!');
+});
 
 // Configuração do Nodemailer
 const transporter = nodemailer.createTransport({
@@ -36,7 +43,7 @@ app.post('/submit', (req, res) => {
 
     // Ajusta a consulta SQL para a tabela 'inscricoes'
     const query = 'INSERT INTO inscricoes (nome, email, idade, regiao, outros, jogos) VALUES (?, ?, ?, ?, ?, ?)';
-    connection.query(query, [nome, email, idade, regiao, outros || null, jogosArray.join(',')], (err, results) => {
+    db.query(query, [nome, email, idade, regiao, outros || null, jogosArray.join(',')], (err, results) => {
         if (err) {
             console.error('Erro ao inserir dados:', err);
             res.status(500).send('Erro ao salvar os dados.');
@@ -69,7 +76,7 @@ app.post('/submit', (req, res) => {
                 res.status(500).send('Erro ao enviar e-mail de confirmação');
                 return;
             }
-            res.send('Dados recebidos com sucesso e e-mail de confirmação enviado! <script>setTimeout(() => { window.location.href = "http://127.0.0.1:5500/frontend/index.html"; }, 3000);</script>');
+            res.send('Dados recebidos com sucesso e e-mail de confirmação enviado! <script>setTimeout(() => { window.location.href = "http://127.0.0.1:5500/index.html"; }, 3000);</script>');
         });
     });
 });

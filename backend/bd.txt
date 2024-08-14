@@ -1,6 +1,8 @@
 Criação do banco de dados
 
 1.Baixe o MySQL Workbench 8.0 CE
-2. Crie um banco de dados com o nome formulario_desafio
+2. Crie um banco de dados com o nome formulario_desafio. Para isso, utilize o comando: CREATE DATABASE formulario_desafio;
+3. Entre no banco de dados formulario_desafio;
+4. Crie uma tabela 
 3. Crie uma tabela com o nome inscricoes contentando as seguintes campos: nome, email, idade, regiao, outros, jogos
  
