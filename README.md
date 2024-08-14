@@ -2,7 +2,7 @@
 
 ### 💻 Descrição do Projeto
 
-Esse projeto consiste em criar uma landing page da Furia com o objeitvo de aumentar a comunidade da Furia junto aos apaixonados por League of Legends".
+Esse projeto consiste em criar uma landing page para Furia com o objetivo de aumentar a comunidade Furia junto aos apaixonados por League of Legends.
 
 ### 📝 Requisitos de elaboração 
 
@@ -31,7 +31,7 @@ A criação da Landing Page foi livre.
     <li>"nodemailer": "^6.9.14</li> 
 </ul>
 
-### Design
+### 🖊️ Design
 
 Todo o design da landing page foi criado no Figma e você pode conferir o protótipo, para mobile e para desktop, no link a seguir: https://www.figma.com/design/tWNFQKnkfWMsImm4WXVUjd/Untitled-(Copy)?node-id=0-1&t=iAygVDxvhC2bqWsP-1
 
