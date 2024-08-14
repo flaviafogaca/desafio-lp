@@ -49,10 +49,10 @@ Pequenas modificações foram realizadas durante a etapa de desenvolvimento. Com
 6. Pronto! O servidor está rodando e conectado ao banco de dados;
 7. Vá para a pasta desafio-furia e abra o arquivo index.html no seu navegador;
 8. Preencha o formulário da landing page e conclua sua inscrição no formulário de inscrição! Ao confirmar a incrição, você recebrá uma mensagem de confirmação tanto no navegador como no seu e-mail utilizado para preencher o formulário.
-![email recebido após realizar a inscrição](src/assets/print_email.png)
+![email recebido após realizar a inscrição](src/assets/print/print_email.png)
 9. Além disso, ao concluir a inscrição no formulário, seus dados serão enviados para o seu banco de dados do MySQL (banco formulario_desafio, tabela inscricoes).
 ![banco de dados](src/assets/print/print_bd.png)
-10. Não é possível realizar a inscrição mais de uma vez.
+10. Seguindo as instruções do arquivo bd.txt para criar o banco de dados, não será possível realizar a inscrição mais de uma vez com o mesmo e-mail.
 
 </br>
 <p align="center">
