@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somos FURIA</title>
+    <link rel="stylesheet" href="src/styles/styles.css">
+    <link rel="icon" href="src/assets/logo_furia.svg" type="image/svg+xml">
+
+</head>
+<body>
+    <main>
+        <section id="home-section">
+            <div class="header-section">
+                <div class="logo">
+                    <img src="src/assets/logo_furia.svg" alt="Logo da Furia" class="logo">
+                    <h1 class="mt-3 mb-3">Somos FURIA</h1>
+                </div>
+  
+                <div class="content-section">
+                    <p class="mb-3">Somos um movimento sociocultural</p>
+                    <p class="mt-3 mb-3">Unimos pessoas e alimentamos sonhos dentro e fora dos jogos</p>
+                    <p class="mt-3 mb-2">Junte-se a nós e faça parte da nossa jornada em LEAGUE OF LEGENDS!</p>
+                </div>
+                
+                <div class="button-section">
+                  <button class="button mt-2 mx-auto" onclick="scrollToForm()" aria-label="Ir para o formulário de inscrição">INSCREVA-SE</button>
+                </div>
+            </div>
+            
+            <div class="team-photo">
+              <img src="src/assets/time_lol_furia.png" alt="Foto do time principal de League of Legends da Furia" class="common-img">
+            </div>          
+        </section>
+
+        <section id="mission-section">
+            <div class="mission-image">
+                <img src="src/assets/torcedores.png" alt="Torcedores da Furia" class="common-img">
+            </div>
+            
+            <div class="mission-text">
+                <p>Nossa história é de pioneirismo, grandes conquistas e tradição. Nosso presente é de desejo, garra e estratégia.</p>
+                <p>A pantera estampada no peito estampa também nosso futuro de glória.</p>  
+                <img src="src/assets/background.svg" alt="Pessoas torcendo/comemorando" class="svg-mission">    
+            </div>
+        </section>
+        <section id="vip-section">
+            <div class="vip-benefits">
+                <h1>CONFIRA OS BENEFÍCIOS EXCLUSIVOS PARA MEMBROS:</h1>
+                <ul class="custom-list">
+                    <li><img src="src/assets/vip_icons.svg" class="mt-1 mb-1" alt="Ícone benefícios">Acesso a conteúdos exclusivos: tutoriais, análises de jogos e entrevistas</li>
+                    <li><img src="src/assets/vip_icons.svg" class="mt-1 mb-1" alt="Ícone benefícios">Participação em sorteios mensais de produtos e acessórios gamers</li>
+                    <li><img src="src/assets/vip_icons.svg" class="mt-1 mb-1" alt="Ícone benefícios">Sorteios de convites para eventos exclusivos e campeonatos</li>
+                    <li><img src="src/assets/vip_icons.svg" class="mt-1 mb-1" alt="Ícone benefícios">Oportunidade de conhecer o office da Furia em eventos para a comunidade</li>
+                </ul>   
+            </div>
+            
+            <div class="vip-subscribe">
+                <h1>VOCÊ É FÃ DE LEAGUE OF LEGENDS?</h1>
+                <h1>SIM? ENTÃO NÃO PERCA ESTA OPORTUNIDADE!</h1>  
+                <img src="src/assets/vip_icon.svg" alt="Ícone VIP" class="icon-vip">
+                <p>Faça parte da comunidade mais vibrante de LOL e tenha acesso exclusivo a eventos, sorteios e muito mais! Preencha o formulário de inscrição e venha jogar com os melhores!</p>
+                <button class="button mt-3 mx-auto" onclick="scrollToForm()" aria-label="Inscreva-se">INSCREVA-SE</button>
+            </div>
+        </section>
+        <section id="form-section">
+          <div class="image-form">
+            <img src="src/assets/jogadora.png" alt="Jogadora da Furia" class="common-img">
+          </div>
+
+          <div class="form">
+            <h1>FORMULÁRIO DE INSCRIÇÃO</h1>
+            <form id="registration-form" action="http://localhost:3000/submit" method="POST" onsubmit="enviarFormulario(event)">
+                <input type="text" id="name" name="nome" required placeholder="Nome completo">
+                <input type="email" id="email" name="email" required placeholder="E-mail">
+                <input type="number" id="age" name="idade" required min="1" step="1" placeholder="Idade">
+                <select id="region" name="regiao" required onchange="verificarRegiao()">
+                    <option value="" disabled selected>Selecione um país ou região</option>
+                    <option value="outro">Outro</option>
+                    <optgroup label="Brasil">
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="PR">Paraná</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </optgroup>                
+                </select>
+                <input type="text" id="other-region" name="outros" placeholder="Especifique se 'Outro'" style="display: none;">
+        
+                <div class="custom-select-container">
+                    <div id="games-button" class="select-button">Preferência de jogos<span class="arrow"></span></div>
+                    <div id="games-container" class="select-options">
+                        <label><input type="checkbox" name="jogos" value="lol">League of Legends</label>
+                        <label><input type="checkbox" name="jogos" value="cs">CS (Counter-Strike: Global Offensive)</label>
+                        <label><input type="checkbox" name="jogos" value="valorant">Valorant</label>
+                        <label><input type="checkbox" name="jogos" value="free_fire">Free Fire</label>
+                        <label><input type="checkbox" name="jogos" value="rainbowSix">Rainbow Six Siege</label>
+                        <label><input type="checkbox" name="jogos" value="apexLegends">Apex Legends</label>
+                        <label><input type="checkbox" name="jogos" value="rocketLeague">Rocket League</label>
+                        <button type="button" onclick="concluirSelecao()">Concluir</button>
+                    </div>
+                </div>        
+                <p>Seus dados estarão seguros conosco e serão utilizados apenas para enviar informações e benefícios exclusivos da furia.gg.</p>
+                <button type="submit">CONCLUIR INSCRIÇÃO</button>  
+            </form>    
+        </div>
+        </section>
+
+        <section id="sponsors-footer">
+            <ul class="sponsors-list">
+                <li><img src="src/assets/bet_nacional.png" alt="Logo Bet Nacional"></li>
+                <li><img src="src/assets/cruzeiro_do_sul.png" alt="Logo Cruzeiro do Sul"></li>
+                <li><img src="src/assets/lenovo_legion.png" alt="Logo Lenovo Legion"></li>
+                <li><img src="src/assets/pokerstars.png" alt="Logo Pokerstars"></li>
+                <li><img src="src/assets/red_bull.png" alt="Logo Red Bull"></li>
+            </ul>
+        </section>
+
+    <footer>
+        <div class="footer-logo">
+            <img src="src/assets/logo_furia.svg" alt="Logo da Furia">
+        </div>
+
+        <div class="politics">
+            <p><a href="https://furia.gg/" target="_blank">© FURIA.gg 2024</a>.<a href="https://furia.gg/privacy-policy/" target="_blank"> Todos os direitos reservados. Política de Privacidade da Plataforma FURIA e <a href="https://furia.gg/terms-and-conditions/" target="_blank">Termos de Uso.</a></p> 
+        </div>
+
+        <div class="footer-social">
+            <ul id="social-list">
+                <li>
+                    <a href="https://x.com/FURIA" target="_blank">
+                        <img src="src/assets/X.svg" alt="Atalho X">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/furiagg/" target="_blank">
+                        <img src="src/assets/Instagram.svg" alt="Atalho Instagram">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://api.whatsapp.com/send/?phone=5511945128297&text=Ol%C3%A1+%2AFURIA+Home%2A%21+Preciso+de+mais+informa%C3%A7%C3%B5es+sobre+FURIA+Home+https%3A%2F%2Ffuria.gg&type=phone_number&app_absent=0" target="_blank">
+                        <img src="src/assets/WhatsApp.svg" alt="Atalho WhatsApp">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/company/furiagg/" target="_blank">
+                        <img src="src/assets/LinkedIn.svg" alt="Atalho LinkedIn">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/@FURIAgg" target="_blank">
+                        <img src="src/assets/YouTube.svg" alt="Atalho YouTube">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="src/javascript/script.js"></script>
+</body>
+</html>
