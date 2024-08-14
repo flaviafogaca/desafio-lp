@@ -31,18 +31,28 @@ A criação da Landing Page foi livre.
     <li>"nodemailer": "^6.9.14</li> 
 </ul>
 
-### 📣 Descrição para Utilização
+### Design
+
+Todo o design da landing page foi criado no Figma e você pode conferir o protótipo, para mobile e para desktop, no link a seguir: https://www.figma.com/design/tWNFQKnkfWMsImm4WXVUjd/Untitled-(Copy)?node-id=0-1&t=iAygVDxvhC2bqWsP-1
+
+Pequenas modificações foram realizadas durante a etapa de desenvolvimento. Como os protótipos sugerem, a landing page foi feita para desktop e está com responsvidade para mobile. 
+
+É possível visualizar a landing page pelo link https://flaviafogaca.github.io/desafio-lp/, porém, sem realizar os passos da "Descrição para Utilização", ao preencher o formulário irá aparecer uma mensagem de erro, uma vez que o servidor não está conectado ao formulário. 
+
+### 📣 Descrição para Utilização 
 
 1. Entre na pasta raíz do projeto `desafio-furia`;
-2. No terminal do editor de código utilizado, rodar o comando `npm install`
-3. No terminal do editor de código utilizado, rodar o comando `npm install express`
-3. Vá para a pasta backend/index.js;
-4. No terminal do editor de código utilizado, rodar o comando "node index.js" (certifique-se que o terminal seja rodado na pasta backend);
-5. Pronto! O servidor está rodando e conectado ao banco de dados;
-6. Vá para a pasta frontend e abra o arquivo index.html no seu navegador;
-7. Preencha o formulário da landing page e conclua sua inscrição no formulário de inscrição! Ao confirmar a incrição, você recebrá uma mensagem de confirmação tanto no navegador como no seu e-mail utilizado para preencher o formulário.
-8. Além disso, ao concluir a inscrição no formulário, seus dados serão enviados para um banco de dados do MySQL (banco formulario_desafio, tabela inscricoes).
-9. É possível realizar a inscrição mais de uma vez.
+2. Entre no arquivo bd.txt e siga as instruções;
+3. Vá para a pasta backend (certifique-se que o terminal seja rodado na pasta backend);
+4. No terminal do editor de código utilizado, rodar o comando `npm install`
+5. No terminal do editor de código utilizado, rodar o comando "node index.js" (certifique-se que o terminal seja rodado na pasta backend);
+6. Pronto! O servidor está rodando e conectado ao banco de dados;
+7. Vá para a pasta desafio-furia e abra o arquivo index.html no seu navegador;
+8. Preencha o formulário da landing page e conclua sua inscrição no formulário de inscrição! Ao confirmar a incrição, você recebrá uma mensagem de confirmação tanto no navegador como no seu e-mail utilizado para preencher o formulário.
+![email recebido após realizar a inscrição](src/assets/print_email.png)
+9. Além disso, ao concluir a inscrição no formulário, seus dados serão enviados para o seu banco de dados do MySQL (banco formulario_desafio, tabela inscricoes).
+![banco de dados](src/assets/print/print_bd.png.png)
+10. Não é possível realizar a inscrição mais de uma vez.
 
 </br>
 <p align="center">
